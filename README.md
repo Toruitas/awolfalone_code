@@ -4,7 +4,7 @@
 
 
 ## Playable URL:
-awolfalone.com
+http://www.awolfalone.com/
 
 ## Project log:
 
