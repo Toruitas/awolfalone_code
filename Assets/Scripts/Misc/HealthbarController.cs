@@ -16,12 +16,13 @@ public class HealthbarController : MonoBehaviour
 
     [Header("Win Timer")]
     public float levelTimer = 0.0f;
-    public float timerWinInSeconds = 900.0f;  // 15 minutes seems reasonable
+    public float timerWinInSeconds = 600.0f;  // 15 minutes seems reasonable
 
     // Start is called before the first frame update
     void Start()
     {
         trees = GameObject.FindGameObjectsWithTag("Plant");
+        
 
         InvokeRepeating("changeHealth", 1.0f, 1.0f);
         
@@ -31,13 +32,14 @@ public class HealthbarController : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
+        levelTimer += Time.deltaTime;
         // Debug.Log("total environmental health" + healthOfEnvironment);
     }
 
     public void changeHealth(){
-        levelTimer += Time.deltaTime;
+        
         totalHealth = 0.0f;
         // totalMaxHealth = 0.0f;
         foreach(GameObject tree in trees){

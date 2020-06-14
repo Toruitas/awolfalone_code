@@ -26,7 +26,7 @@ public class Deer : MonoBehaviour
 
     [Header("Eating Stuff")]
     public float eatRadius; // inside this radius, deer eats
-    public float timeToHunger;
+    private float timeToHunger;
     private GameObject closestPlant = null;
     public float bitesPerTick = 0.02f;
     public float smellRange = 25.0f;
@@ -133,8 +133,8 @@ public class Deer : MonoBehaviour
     public void StartEatingClosestPlant(){
         // And if the deer has arrived at its destination, it starts eating.
         // if(Vector3.Distance(agent.path.corners[0],transform.position) < eatRadius){
-        if(agent.path.corners.Length > 1){
-            if(Vector3.Distance(agent.path.corners[1], agent.path.corners[0]) < eatRadius){
+        if(agent.path.corners.Length >= 1){
+            if(Vector3.Distance(transform.position, closestPlant.transform.position) < eatRadius){
                 agent.ResetPath();
                 currentState = DeerState.eat;
                 anim.SetBool("moving", false);

@@ -72,7 +72,7 @@ public class WaveSpawner : MonoBehaviour
 
         currentState = SpawnState.spawning;
         // first increase the difficulty!
-        _wave.count += 5;
+        _wave.count += 15;
 
         //spawn
         for (int i=0; i<_wave.count; i++){
@@ -124,7 +124,7 @@ public class WaveSpawner : MonoBehaviour
 
 
     void WinOrLose(){
-        
+
     }
 
     

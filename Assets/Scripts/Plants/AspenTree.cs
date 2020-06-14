@@ -37,7 +37,7 @@ public class AspenTree : Plant
             currentGrowthStage = 1;
             GetComponent<BoxCollider2D>().enabled = true;
             if(hasEagle){
-                transform.GetChild(0).gameObject.SetActive(true);
+                transform.GetChild(0).gameObject.SetActive(false);
             }
         }else{
             spriteR.sprite = sprites[0];

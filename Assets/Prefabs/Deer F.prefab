@@ -104,7 +104,7 @@ MonoBehaviour:
   anim: {fileID: 1810367657875637939}
   wolf: {fileID: 0}
   currentState: 0
-  eatRadius: 0.75
+  eatRadius: 1
   timeToHunger: 0
   bitesPerTick: 0.05
   smellRange: 15
